@@ -1,0 +1,124 @@
+ru:
+  activerecord:
+    attributes:
+      doorkeeper/application:
+        name: 'Имя'
+        redirect_uri: 'Redirect URI'
+    errors:
+      models:
+        doorkeeper/application:
+          attributes:
+            redirect_uri:
+              fragment_present: 'не должен содержать фрагменты.'
+              invalid_uri: 'должен быть валидным URI.'
+              relative_uri: 'должен быть абсолютным URI.'
+              secured_uri: 'должен быть HTTPS/SSL URI.'
+
+  doorkeeper:
+    applications:
+      confirmations:
+        destroy: 'Уверены?'
+      buttons:
+        edit: 'Редактировать'
+        destroy: 'Удалить'
+        submit: 'Сохранить'
+        cancel: 'Отмена'
+        authorize: 'Авторизовать'
+      form:
+        error: 'Проверьте форму на наличие ошибок!'
+      help:
+        redirect_uri: 'Один URI в строке'
+        native_redirect_uri: 'Использовать %{native_redirect_uri} для локальных тестов'
+        scopes: 'Права (scopes) разделенные пробелами. Оставьте пустым для использования значения по умолчанию.'
+      edit:
+        title: 'Редактирование приложения'
+      index:
+        title: 'Ваши приложения'
+        new: 'Новое приложение'
+        name: 'Имя'
+        callback_url: 'Callback URL'
+      new:
+        title: 'Новое приложение'
+      show:
+        title: 'Приложение: %{name}'
+        application_id: 'Application Id'
+        secret: 'Secret'
+        scopes: 'Scopes'
+        callback_urls: 'Callback urls'
+        actions: 'Действия'
+
+    authorizations:
+      buttons:
+        authorize: 'Авторизовать'
+        deny: 'Отклонить'
+      error:
+        title: 'Произошла ошибка'
+      new:
+        title: 'Требуется разрешение'
+        prompt: 'Разрешить %{client_name} использовать вашу учетную запись?'
+        able_to: 'Это приложение будет иметь возможность'
+      show:
+        title: 'Авторизационный код'
+
+    authorized_applications:
+      confirmations:
+        revoke: 'Уверены?'
+      buttons:
+        revoke: 'Отозвать'
+      index:
+        title: 'Ваши авторизованные приложения'
+        application: 'Приложение'
+        created_at: 'Создано'
+        date_format: '%d-%m-%Y %H:%M:%S'
+
+    errors:
+      messages:
+        # Common error messages
+        invalid_request: 'В запросе отсутствует необходимый параметр, содержится неподдерживамое значение параметра, или неверно составлен запрос.'
+        invalid_redirect_uri: 'Неправильный Redirect URI.'
+        unauthorized_client: 'Клиент не авторизован для использования этого метода.'
+        access_denied: 'Владелец ресурса или сервер авторизации отверг запрос.'
+        invalid_scope: 'Запрошены неправильные или неподдерживаемые права (scope).'
+        server_error: 'Сервер авторизации столкнулся с непредвиденным условием, которое не позволяет ему выполнить запрос.'
+        temporarily_unavailable: 'Сервер авторизации не может обработать запрос из-за временной перегрузки или обслуживания сервера.'
+
+        #configuration error messages
+        credential_flow_not_configured: 'Владелец ресурса не удостоверен, Doorkeeper.configure.resource_owner_from_credentials не сконфигурирован.'
+        resource_owner_authenticator_not_configured: 'Владелец ресурса не найден, Doorkeeper.configure.resource_owner_authenticator не сконфигурирован.'
+
+        # Access grant errors
+        unsupported_response_type: 'Сервер авторизации не поддерживает этот тип ответа.'
+
+        # Access token errors
+        invalid_client: 'Не удалось аутентифицировать клиента. Неизвестный клиент, не включена аутентификация, или неподдерживаемый метод аутентификации.'
+        invalid_grant: 'Предоставленное разрешение (grant) недействительно, истекло время жизни, отозвано, не совпадает Redirect URI используемое в запросе авторизации, или было выдано другому клиенту.'
+        unsupported_grant_type: 'Тип разрешения (grant) не поддерживается сервером авторизации.'
+
+        # Password Access token errors
+        invalid_resource_owner: 'Предоставленные учетные данные владельца ресурса недействительны, или владелец ресурса не найден'
+
+        invalid_token:
+          revoked: "Аccess token был отозван"
+          expired: "Время жизни access token истекло"
+          unknown: "Недействительный access token"
+
+    flash:
+      applications:
+        create:
+          notice: 'Приложение создано.'
+        destroy:
+          notice: 'Приложение удалено.'
+        update:
+          notice: 'Приложение обновлено.'
+      authorized_applications:
+        destroy:
+          notice: 'Приложение отозвано.'
+
+    layouts:
+      admin:
+        nav:
+          oauth2_provider: 'Поставщик OAuth2'
+          applications: 'Приложения'
+      application:
+        title: 'OAuth требуется авторизация'
+        
